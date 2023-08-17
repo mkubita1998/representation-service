@@ -1,0 +1,22 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="analytics.utils.flows.AbstractWorkCoordinator.gather_and_group_packets.mock_calls" />
+          <option value="analytics.utils.flows.WorkCoordinator.process_packets.mock_calls" />
+          <option value="analytics.utils.flows.WorkCoordinator.make_predictions.mock_calls" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
