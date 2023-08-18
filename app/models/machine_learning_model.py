@@ -5,6 +5,7 @@ import sklearn.exceptions
 
 from scipy.spatial import KDTree
 from sklearn.tree import DecisionTreeRegressor
+from sklearn.utils.validation import check_is_fitted
 from typing import Optional
 
 
@@ -37,6 +38,9 @@ class MachineLearningModel:
     def predict(self, data: np.array) -> Optional[float]:
         """Method used to normalize data for training and make predictions."""
         x = data
+        if not check_is_fitted(self.model):
+            logging.info("Model is not fitted yet")
+            return None
         try:
             return self.model.predict(x.reshape(1, -1))
         except (sklearn.exceptions.NotFittedError, np.exceptions.AxisError, ValueError) as e:
